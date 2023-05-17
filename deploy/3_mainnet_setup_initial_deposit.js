@@ -22,9 +22,9 @@ const setupChild = async function (hre) {
   )
 
   log('Approving root contract...')
-  await breedContract.approve(rootTunnelContract.address, ethers.utils.parseEther("12"))
+  await (await breedContract.approve(rootTunnelContract.address, ethers.utils.parseEther("12"))).wait()
   log('Initial deposit...')
-  await rootTunnelContract.deposit(breedAddress, deployer, ethers.utils.parseEther("12"), ethers.constants.HashZero)
+  await (await rootTunnelContract.deposit(breedAddress, deployer, ethers.utils.parseEther("12"), ethers.constants.HashZero)).wait()
   log('Done')
 
   const maticBreed = await rootTunnelContract.rootToChildTokens(breedAddress)
