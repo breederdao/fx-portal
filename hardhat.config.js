@@ -39,6 +39,7 @@ module.exports = {
     goerli: {
       url: process.env.GOERLI_RPC || "https://goerli.infura.io/v3/",
       accounts,
+      gasPrice: 10000000000,
     },
     polygon: {
       url: process.env.POLYGON_RPC || "https://polygon-rpc.com",
