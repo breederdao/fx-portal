@@ -1,4 +1,3 @@
-const verify = require('../helpers/verify')
 const { ethers } = require("hardhat");
 
 const setupChild = async function (hre) {
