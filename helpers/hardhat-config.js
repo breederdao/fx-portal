@@ -10,6 +10,9 @@ const networkConfig = {
   },
   mumbai: {
     blockConfirmations: 3
+  },
+  polygon: {
+    blockConfirmations: 6
   }
 }
 
